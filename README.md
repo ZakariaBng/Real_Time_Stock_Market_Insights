@@ -4,7 +4,7 @@ The aim was to display various stock market insights in real time, in an interac
 
 ## Instllation requirements (local):
 • pip install -r requirements.txt
-beautifulsoup4==4.12.3
+beautifulsoup4==4.12.3 \n
 geopy==2.4.1
 numpy==1.24.0
 pandas==1.5.2
