@@ -142,7 +142,7 @@ with col2:
         st.metric("Volume (Million)", f"{stock_data['Volume'][-1]/1000000:.2f}", f"{((stock_data['Volume'][-1] - stock_data['Volume'][-2])/stock_data['Volume'][-2])*100:.2%}")
 
     with col3:
-        st.metric("Market Cap. (Bn $)", f"{metrics_data['marketCap']/1000000000:.2f}")
+        st.metric("Current Market Cap. (Bn $)", f"{metrics_data['marketCap']/1000000000:.2f}")
 
     with col4:
         stock_data['Daily Perf %'] = stock_data['Close'].pct_change() * 100
