@@ -147,7 +147,7 @@ with col2:
     with col4:
         stock_data['Daily Perf %'] = stock_data['Close'].pct_change() * 100
         average_daily_return = stock_data['Daily Perf %'].mean()
-        st.metric("Average Daily Perf.", f"{average_daily_return:.2%}")        
+        st.metric("Avg. Daily Perf.", f"{average_daily_return:.2%}")        
 
 
 
