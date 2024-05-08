@@ -136,10 +136,10 @@ with col2:
     col1, col2, col3, col4 = container_info.columns(4)  
 
     with col1:
-        st.metric("Closing Price", f"{stock_data['Close'][-1]:.2f}", f"{((stock_data['Close'][-1] - stock_data['Close'][-2])/stock_data['Close'][-2])*100:.2%}")
+        st.metric("Closing Price", f"{stock_data['Close'][-1]:.2f}", f"{((stock_data['Close'][-1] - stock_data['Close'][-2])/stock_data['Close'][-2]):.2%}")
 
     with col2:
-        st.metric("Volume (Million)", f"{stock_data['Volume'][-1]/1000000:.2f}", f"{((stock_data['Volume'][-1] - stock_data['Volume'][-2])/stock_data['Volume'][-2])*100:.2%}")
+        st.metric("Volume (Million)", f"{stock_data['Volume'][-1]/1000000:.2f}", f"{((stock_data['Volume'][-1] - stock_data['Volume'][-2])/stock_data['Volume'][-2]):.2%}")
 
     with col3:
         st.metric("Market Cap. (Bn $)", f"{metrics_data['marketCap']/1000000000:.2f}")
@@ -147,7 +147,7 @@ with col2:
     with col4:
         stock_data['Daily Perf %'] = stock_data['Close'].pct_change() * 100
         average_daily_return = stock_data['Daily Perf %'].mean()
-        st.metric("Avg. Daily Perf.", f"{average_daily_return:.2%}")        
+        st.metric("Avg. Daily Perf.", f"{average_daily_return/100:.2%}")        
 
 
 
